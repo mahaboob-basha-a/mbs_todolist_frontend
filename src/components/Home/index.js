@@ -1,7 +1,7 @@
 import Navbar from "../Navbar";
 import './index.css';
 import Cookies from "js-cookie";
-import { useEffect, useState } from "react";
+import { useEffect, useState ,useCallback} from "react";
 import { Navigate } from "react-router-dom";
 import TaskList from '../TaskList';
 import {v4 as uuid} from "uuid";
@@ -14,13 +14,14 @@ function Home() {
     const [edit,setEdit] = useState({edits:false,id:""})
     const [usern,setUsern] = useState("")
     const [loader,setLoader] = useState(true)
+    const [token,setToken] = useState("")
 
-    const onLoading = async ()=>{
+    const onLoading = useCallback(async ()=>{
         setLoader(true)
         const url = "https://mbs-todo-list-backend-1.onrender.com/"
         const payload = {
             headers: {
-                token:tokenExists,
+                token:token,
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
@@ -32,7 +33,7 @@ function Home() {
         const {username,todolist} = datas[0]
         setUsern(username)
         setTaskList(todolist)
-    }
+    },[token])
 
     const onSaveclick = async ()=>{
         setLoader(true)
@@ -52,9 +53,13 @@ function Home() {
         alert(res)
     }
     
+
+    
     useEffect(()=>{
+        const tokenExists = Cookies.get("jwt_token")
+        setToken(tokenExists)
         onLoading()
-    })
+    },[onLoading])
 
     const onAdding = (e)=>{
         e.preventDefault()
