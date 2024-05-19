@@ -29,7 +29,7 @@ function Home() {
         const res = await fetch(url,payload)
         const datas = await res.json()
         setLoader(false)
-        const {name,username,todolist} = datas[0]
+        const {username,todolist} = datas[0]
         setUsern(username)
         setTaskList(todolist)
     }
