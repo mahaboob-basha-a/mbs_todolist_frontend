@@ -54,7 +54,7 @@ function Home() {
     
     useEffect(()=>{
         onLoading()
-    },[])
+    })
 
     const onAdding = (e)=>{
         e.preventDefault()
