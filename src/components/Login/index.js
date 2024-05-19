@@ -16,7 +16,7 @@ function Login() {
         setshowPass(prev=> !prev)
     }
     const sendLoginDetails = async ()=>{
-        const url2 = "http://localhost:4000/login"
+        const url2 = "https://mbs-todo-list-backend-1.onrender.com/login"
         const details = {
             username,password
         }

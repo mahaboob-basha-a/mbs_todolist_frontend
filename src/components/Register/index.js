@@ -20,7 +20,7 @@ function Register(prop) {
     }
 
     const sendRegisterData = async ()=>{
-        const url = "http://localhost:4000/register"
+        const url = "https://mbs-todo-list-backend-1.onrender.com/register"
         const details = {
             name,username,password
         }

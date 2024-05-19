@@ -17,7 +17,7 @@ function Home() {
 
     const onLoading = async ()=>{
         setLoader(true)
-        const url = "http://localhost:4000/"
+        const url = "https://mbs-todo-list-backend-1.onrender.com/"
         const payload = {
             headers: {
                 token:tokenExists,
@@ -36,7 +36,7 @@ function Home() {
 
     const onSaveclick = async ()=>{
         setLoader(true)
-        const url2 = `http://localhost:4000/update/${usern}`
+        const url2 = `https://mbs-todo-list-backend-1.onrender.com/update/${usern}`
         const payload = {
             headers: {
                 token:tokenExists,
