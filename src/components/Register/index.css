@@ -1,0 +1,89 @@
+.register-page{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(160deg, #5e43e4cd,#a8e1fb,#CE93D8);
+}
+.register-card{
+    background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+/* backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px); */
+border: 1.6px solid #fff;
+height: 340px;
+width: 300px;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 25px 8px;
+gap: 5px;
+}
+.register-card h1{
+    font-size: 17px;
+    font-family: "Roboto";
+}
+.register-card p{
+    font-size: 11px;
+    font-family: "Roboto";
+
+}
+.show-hide-btn{
+    border: 0;
+    background-color: transparent;
+    font-size: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.register-form{
+    font-family: "Roboto";
+    font-size: 14px;
+    color: #363636;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.register-form input{
+    border: 1px solid #8c8a8a;
+    border-radius: 4px;
+    padding: 5px 10px;
+    background-color: #fffcfc;
+}
+.register-form input::placeholder{
+    font-size: 11px;
+}
+.register-form label{
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Roboto";
+}
+.register-btn{
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 10px;
+}
+.already-account a{
+    color: #000fff;
+    text-decoration: none;
+}
+.show-hide-button{
+    border: 0;
+    background-color: transparent;
+    font-size: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.error-msg{
+    color: #ff0037;
+}

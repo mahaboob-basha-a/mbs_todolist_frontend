@@ -1,0 +1,32 @@
+.task-list{
+    display: flex;
+    gap: 20px;
+    width: 300px;
+    align-items: center;
+    border: 2px solid #7700ff;
+    justify-content: space-between;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-family: "Roboto";
+    margin-top: 8px;
+}
+.btns{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+.task-list input{
+    width: 15px;
+    height: 15px;
+}
+.task-list p{
+    text-transform: capitalize;
+    font-size: 14px;
+}
+.list-content{
+    display: flex;
+    gap: 15px;
+}
+.check-name{
+    text-decoration: line-through;
+}
